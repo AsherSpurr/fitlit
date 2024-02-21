@@ -21,39 +21,44 @@ import '../src/images/water-drop.png'
 import '../src/images/sleepy-star.png'
 
 /* <><> API Data <><> */
-function initiateUserFunctions(userData) {
-    getRandomUser(userData)
-    calculateAverageSteps(userData)
-    displaySteps(userData)
+
+function initiateFunctions(userData, hydrationData, sleepData) {
+    const randomUserId = getRandomUserId(userData);
+    displayUserData(getUserInfo(randomUserId, userData));
+    displaySteps(userData, randomUserId);
+    displayHydrationData(hydrationData, randomUserId);
+    displaySleepData(sleepData, randomUserId);
 }
 
-function initiateHydrationFunctions(hydrationData) {
-    averageOunces(hydrationData)
-    dailyOunces(hydrationData)
-    dailyOunces(hydrationData)
-    displayHydrationData(hydrationData)
-}
+// function initiateUserFunctions(userData) {
+//     getRandomUser(userData)
+//     calculateAverageSteps(userData)
+//     displaySteps(userData)
+// }
 
-function initiateSleepFunctions(sleepData) {
-    calculateAvgHours(sleepData)
-    calculateAvgQuality(sleepData)
-    findDailySleep(sleepData)
-    displaySleepData(sleepData)
-}
+// function initiateHydrationFunctions(hydrationData) {
+//     averageOunces(hydrationData)
+//     dailyOunces(hydrationData)
+//     dailyOunces(hydrationData)
+//     displayHydrationData(hydrationData)
+// }
+
+// function initiateSleepFunctions(sleepData) {
+//     calculateAvgHours(sleepData)
+//     calculateAvgQuality(sleepData)
+//     findDailySleep(sleepData)
+//     displaySleepData(sleepData)
+
 
 /* <><> Main User Info <><> */
 var randomUserId;
 
-function getRandomUser(userData) {
-    randomUserId = Math.floor(Math.random() * userData.users.length)
-    getUserInfo(randomUserId, userData)
+function getRandomUserId(userData) {
+    return Math.floor(Math.random() * userData.users.length)
 }
 
-function getUserInfo(randomUserId, userData) {
-    let targetUser = userData.users.find((user) => {
-        return user.id === randomUserId
-    })
-    displayUserData(targetUser)
+function getUserInfo(userId, userData) {
+    return userData.users.find(user => user.id === userId)
 }
 
 /* <><> Average Steps <><> */
@@ -164,34 +169,17 @@ function findWeeklyQuality(sleep, day) {
     return weeklyQuality
 }
 
-/* <><> UNUSED FUNCS (required by project specs) <><>
-
-function findHoursSlept(sleep, day) {
-    let targetUser = sleep.sleepData.filter((user) => {
-        return user.userID === randomUserId
-    }).find((user) => { return user.date === day })
-    return targetUser.hoursSlept
-}
-
-function findSleepQuality(sleep, day) {
-    let targetUser = sleep.sleepData.filter((user) => {
-        return user.userID === randomUserId
-    }).find((user) => { return user.date === day })
-    return targetUser.sleepQuality
-}
-*/
-
-
 export {
     getUserInfo,
     calculateAverageSteps,
-    getRandomUser,
+    getRandomUserId,
     averageOunces,
     dailyOunces,
     weeklyOunces,
-    initiateUserFunctions,
-    initiateHydrationFunctions,
-    initiateSleepFunctions,
+    initiateFunctions,
+    // initiateUserFunctions,
+    // initiateHydrationFunctions,
+    // initiateSleepFunctions,
     findDailySleep,
     findWeeklyHours,
     findWeeklyQuality,
