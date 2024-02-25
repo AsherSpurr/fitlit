@@ -45,6 +45,7 @@ Additional enhancements could include:
 ## FitLit: Part 2
 
 ### Screenshots - Updated CSS and Additional Features
+![App Preview](./assets/FitLit.gif)
 
 ### Motivation Feature
 

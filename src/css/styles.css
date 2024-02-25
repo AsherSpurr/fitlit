@@ -400,6 +400,8 @@ input {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* justify-content: space-between; */
+  height: 100%;
   margin-left: 0;
   float: left;
 }
@@ -427,6 +429,7 @@ tr,
 th {
   padding: 10px 10px;
   text-align: center;
+
 }
 
 .hours-slept {
