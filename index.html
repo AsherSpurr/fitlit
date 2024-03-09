@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Outline&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap" rel="stylesheet">
+  <title>Fitlit - Track Your Fitness Data</title>
+</head>
+
+<body>
+  <main class="main">
+    <header class="header">
+      <img src="./images/layered-dumbell.png" alt="Purple dumbell clip-art" class="dumbell-image" height="35px"
+        width="35px">
+      <h1>Fitlit</h1>
+      <nav>
+        <div class="links-cont">
+          <a class="link" href="#hydration-link">Hydration</a>
+          <a class="link" href="#sleep-link">Sleep</a>
+          <a class="link" href="#motivation-link">Motivation</a>
+        </div>
+      </nav>
+    </header>
+    <section class="user-container">
+      <article class="user-data">
+        <article class="user-data-left">
+          <div class="name-cont">
+            <h2 class="user-name">USER <br> NAME</h2>
+          </div>
+          <div class="address-cont"></div>
+          <ul class="user-friends">My Friends</ul>
+        </article>
+        <figure class="profile-image">
+          <img src="./images/profile-image1.png" alt="sample profile picture" class="profile-png" height="300vh"
+            width="300vw">
+        </figure>
+        <article class="user-data-right">
+          <dl class="steps-data">
+            <div class="stride-cont">
+              <dt class="stride-label">Stride Length</dt>
+              <dd class="stride-data data" style="white-space: pre;">1234</dd>
+            </div>
+            <div class="steps-goal-cont">
+              <dt class="steps-goal-label" style="white-space: pre;">My Step Goal</dt>
+              <dd class="steps-goal-data data">2345</dd>
+            </div>
+            <div class="global-steps-goal-cont">
+              <dt class="global-steps-goal-label">Avg Step Goal Among Users</dt>
+              <dd class="global-steps-goal-data data">3456</dd>
+            </div>
+          </dl>
+        </article>
+      </article>
+    </section>
+    <section class="banner-box">
+      <h1 class="banner-text">GET SWOLE · GET SWOLE · GET SWOLE</h1>
+    </section>
+    <a id="hydration-link"></a>
+    <section class="hydration-container">
+      <div class="hydration-right-cont">
+        <h2 class="hydration-heading" id="h2-hydration">Hydration</h2>
+        <figure class="water-img-cont">
+          <img src="./images/water-droplet.png" alt="Two overlapping water droplets" class="water-png">
+          <h3 id="hydration-data">----</h3>
+        </figure>
+      </div>
+      </div>
+      <div class="hydration-left-cont">
+        <div class="hydration-user-input">
+          <h3>Add today's hydration data!</h3>
+          <form class="hydration-inputs" aria-label="Enter hydration data">
+            <label for="hydration-date">Date:</label>
+            <input type="date" name="hydration-date" id="hydration-date">
+            <label for="hydration-volume">Volume (oz):</label>
+            <input type="number" name="hydration-volume" id="hydration-volume">
+            <span id="hydrationVolumeInstructions" class="visually-hidden">Enter the volume of water in ounces.</span>
+          </form>
+            <div class="error"></div>
+            <button class="hydration-submit">Submit</button>
+        </div>
+        <dl class="daily-hydration-cont">
+          <dt class="daily-hydration-label1">Today you drank</dt>
+          <dd class="daily-hydration-label">---- ounces</dd>
+        </dl>
+        <select class="weekly-hydration-select" aria-label="Select a date to see your Weekly Hydration information">
+          <option class="hydration-select">Click to Select a Date</option>
+          <option class="hydration-date" value="weekly-date-data1"></option>
+          <option class="hydration-date" value="weekly-date-data2"></option>
+          <option class="hydration-date" value="weekly-date-data3"></option>
+          <option class="hydration-date" value="weekly-date-data4"></option>
+          <option class="hydration-date" value="weekly-date-data5"></option>
+          <option class="hydration-date" value="weekly-date-data6"></option>
+          <option class="hydration-date" value="weekly-date-data7"></option>
+        </select>
+      </div>
+    </section>
+    <section class="banner-box" id="sleep-banner">
+      <h1 class="banner-text">· DONT LET YOUR DREAMS BE DREAMS ·</h1>
+    </section>
+    <a id="sleep-link"></a>
+    <section class="main-sleep-container">
+      <div class="sleep-cont-left">
+        <h2 class="sleep-heading" id="h2-sleep">Sleep</h2>
+        <figure class="moon-img-cont">
+          <img src="./images/moon.png" alt="hand drawn cresent moon with 3 stars" class="moon-png">
+        </figure>
+        <div class="sleep-data-cont">
+          <table class="sleep-data-table" style="width:100%">
+            <tr>
+              <th>Hours</td>
+              <th>Quality</td>
+            </tr>
+            <tr>
+              <td class="hours-slept">----</td>
+              <td class="quality-slept">----</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <article class="sleep-cont-right">
+        <dl class="daily-sleep-cont">
+          <dt class="daily-sleep-label">Last Night You Slept</dt>
+          <dd class="daily-sleep-data">DAILY SLEEP DATA</dd>
+        </dl>
+        <dl class="avg-sleep-cont">
+          <dt class="avg-quality-label">Average Sleep Quality</dt>
+          <dd class="avg-quality-data">N/A</dd>
+          <dt class="avg-hours-label">Average Sleep Hours</dt>
+          <dd class="avg-hours-data">N/A</dd>
+        </dl>
+        <select class="weekly-sleep-select" aria-label="Select a date to see your Weekly Sleep information">
+          <option class="sleep-select">Click to Select a Date</option>
+          <option class="sleep-date" value="weekly-date-data1"></option>
+          <option class="sleep-date" value="weekly-date-data2"></option>
+          <option class="sleep-date" value="weekly-date-data3"></option>
+          <option class="sleep-date" value="weekly-date-data4"></option>
+          <option class="sleep-date" value="weekly-date-data5"></option>
+          <option class="sleep-date" value="weekly-date-data6"></option>
+          <option class="sleep-date" value="weekly-date-data6"></option>
+        </select>
+      </article>
+    </section>
+    <a id="motivation-link"></a>
+    <section class="banner-box" id="sleep-banner">
+      <h1 class="banner-text">· DONT LET YOUR DREAMS BE DREAMS ·</h1>
+    </section>
+    <section class="motivation">
+      <section class="motivation-left">
+        <img class="planet-png" src="./images/planet.png" alt="child like drawing of a planet and stars" />
+        <div class="take-off-cont">
+          <img class="space-ship-png" src="./images/space-ship.png" alt="Child-like drawing of a spaceship" />
+          <div class="take-off"></div>
+        </div>
+      </section>
+      <section class="motivation-right">
+        <!-- <div class="right-style"> -->
+        <h2 class="motivation-heading" id="h2-motivation">Motivation</h2>
+        <div class="slide-cont">
+          <label class="slider-label" for="slider">Slide to indicate level of motivation</label>
+          <input class="slider" name="slider" type="range" min="0" max="10" value="0" step="2" id="slider" aria-labelledby="hydrationVolumeInstructions">
+          <img class="wavy-corner-png" src="./images/wavy-corner.png" alt="Wavy static image that fills corner or page" />
+        </div>
+        <!-- </div> -->
+      </section>
+    </section>
+  </main>
+  <script src="bundle.js"></script>
+</body>
+
+</html>
